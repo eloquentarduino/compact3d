@@ -1,4 +1,4 @@
-gsplat_dir='./gaussian-splatting'
+gsplat_dir='../gaussian-splatting'
 mv train_kmeans.py "$gsplat_dir"/
 mv render.py "$gsplat_dir"/
 mv decompress_to_ply.py "$gsplat_dir"/
