@@ -393,7 +393,7 @@ if __name__ == "__main__":
     args.save_iterations.append(args.iterations)
 
     print("Optimizing " + args.model_path)
-    args.test_iterations = list(np.arange(0, args.total_iterations + 1, 100))
+    args.test_iterations = list(np.arange(0, args.total_iterations + 1, 300))
 
     # Initialize system state (RNG)
     safe_state(args.quiet)
