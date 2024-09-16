@@ -49,6 +49,7 @@ class Quantize_kMeans():
         # Update all clusters except the excluded ones in a single operation
         # Add a dummy element with zeros at the end
         feat = torch.cat([feat, torch.zeros_like(feat[:1]).cuda()], 0)
+        print("cluster_ids", self.cluster_ids, self.cluster_ids.dtype)
         self.centers = torch.sum(feat[self.cluster_ids, :].reshape(
             self.num_clusters, self.max_cnt, -1), dim=1)
         if len(self.excl_cluster_ids) > 0:
